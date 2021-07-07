@@ -2,11 +2,16 @@ body {
   &.offcanvas-open {
     overflow-y: hidden;
     padding-right: 17px;
-    visibility: visible;
+    // @include max-screen(991) {
+    //   padding-right: 0px;
+    // }
   }
 }
 
 .offcanvas-overlay {
+  &.active{
+    display: block;
+  }
   position: fixed;
   z-index: 999;
   top: 0;
@@ -15,23 +20,19 @@ body {
   left: 0;
   display: none;
   background-color: $overlay-color;
-
-  &.active{
-    display: block;
-  }
 }
 
-
+// offcanvas
 .offcanvas {
   &.offcanvas-open {
     @include transform(translateX(0));
+    visibility: visible;
   }
   &.offcanvas-mobile-menu {
     right: auto;
     left: 0;
     transform: translateX(-100%);
     &.offcanvas-open {
-      visibility: visible;
       transform: translateX(0);
     }
   }
@@ -44,10 +45,13 @@ body {
   display: block;
   overflow: hidden;
   width: 400px;
+  // @include max-screen(480) {
+  //   width: 300px;
+  // }
   height: 100vh;
-  // @include transform(translateX(100%));
-  transform: translateX(100%);
+  @include transform(translateX(100%));
   background-color: $color-white;
   box-shadow: none;
   @include transition(0.5s ease-in-out);
+
 }

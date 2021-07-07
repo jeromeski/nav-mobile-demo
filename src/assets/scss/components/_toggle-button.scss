@@ -1,7 +1,5 @@
 button.toggle-button {
-  background-color: transparent;
-  outline: none;
-  border: none;
+  @include button;
 }
 
 button.toggle-button > * {

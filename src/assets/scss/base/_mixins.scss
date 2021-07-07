@@ -2,10 +2,27 @@
   font-size: $x
 }
 
-@mixin transform($value) {
-  transform: $value;
+// transition
+@mixin transition($x) {
+  transition: $x;
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
 }
 
-@mixin transition($value) {
-  transition: $value;
+// transform
+@mixin transform($x) {
+  transform: $x;
+  -webkit-transform: $x;
+  -moz-transform: $x;
+  -ms-transform: $x;
+  -o-transform: $x;
+}
+
+@mixin button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 5px;
 }
