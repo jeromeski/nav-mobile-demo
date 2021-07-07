@@ -1,0 +1,11 @@
+@mixin font-size($x) {
+  font-size: $x
+}
+
+@mixin transform($value) {
+  transform: $value;
+}
+
+@mixin transition($value) {
+  transition: $value;
+}

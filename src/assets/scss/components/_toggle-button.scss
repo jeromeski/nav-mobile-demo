@@ -1,0 +1,10 @@
+button.toggle-button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+button.toggle-button > * {
+  color: white;
+  pointer-events: inherit;
+}

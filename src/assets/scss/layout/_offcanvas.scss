@@ -1,0 +1,53 @@
+body {
+  &.offcanvas-open {
+    overflow-y: hidden;
+    padding-right: 17px;
+    visibility: visible;
+  }
+}
+
+.offcanvas-overlay {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: $overlay-color;
+
+  &.active{
+    display: block;
+  }
+}
+
+
+.offcanvas {
+  &.offcanvas-open {
+    @include transform(translateX(0));
+  }
+  &.offcanvas-mobile-menu {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+    &.offcanvas-open {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: auto;
+  display: block;
+  overflow: hidden;
+  width: 400px;
+  height: 100vh;
+  // @include transform(translateX(100%));
+  transform: translateX(100%);
+  background-color: $color-white;
+  box-shadow: none;
+  @include transition(0.5s ease-in-out);
+}
