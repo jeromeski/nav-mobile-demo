@@ -8,13 +8,14 @@ const Navbar = ({ toggle }) => {
     <div className="navbar">
       <div className="container">
         <Logo title="LogoInc" />
-        <div className="d-md-none">
+        <div className="d-sm-block d-lg-none">
           <button className="toggle-button" onClick={() => toggle()}>
             <FontAwesomeIcon icon={faBars} size="2x" />
           </button>
         </div>
         <ul className="auth-links d-none d-lg-flex">
           <li className="signin">Sign In</li>
+          <span>|</span>
           <li className="register">Register</li>
         </ul>
       </div>

@@ -1,0 +1,20 @@
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: all 0.3s;
+}
+
+.sticky-header{
+  &.sticky {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeInDown 0.5s ease-in-out;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  }
+}
